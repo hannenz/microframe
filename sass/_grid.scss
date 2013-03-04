@@ -1,0 +1,47 @@
+/* Grid */
+
+.container {
+	width:960px;
+	min-width:400px;
+	max-width:1160px;
+	margin:0 auto;
+}
+
+.row {
+	display:block;
+	overflow:visible;
+	width:100%;
+	margin:0 0-$gutterWidth;
+	padding:0;
+}
+
+.row:after, .clearfix:after {
+	content:'.';
+	display:block;
+	visibility: hidden;
+	height:0;
+	line-height: 0;
+	clear:both;
+}
+
+.column, .columns {
+	position:relative;
+	display:block;
+	float:left;
+	margin-left:$gutterWidth;
+	margin-right:$gutterWidth;
+}
+
+
+.one.column, .one.columns {	width:(100%/12*1) - (2 * $gutterWidth); }
+.two.columns	{	width:(100%/12*2) - (2 * $gutterWidth); }
+.three.columns	{	width:(100%/12*3) - (2 * $gutterWidth); }
+.four.columns	{	width:(100%/12*4) - (2 * $gutterWidth); }
+.five.columns	{	width:(100%/12*5) - (2 * $gutterWidth); }
+.six.columns	{	width:(100%/12*6) - (2 * $gutterWidth); }
+.seven.columns	{	width:(100%/12*7) - (2 * $gutterWidth); }
+.eight.columns	{	width:(100%/12*8) - (2 * $gutterWidth); }
+.nine.columns	{	width:(100%/12*9) - (2 * $gutterWidth); }
+.ten.columns	{	width:(100%/12*10) - (2 * $gutterWidth); }
+.eleven.columns	{	width:(100%/12*11) - (2 * $gutterWidth); }
+.twelve.columns	{	width:(100%/12*12) - (2 * $gutterWidth); }

@@ -1,0 +1,52 @@
+/* Forms */
+
+form {
+	background:$lightGrey;
+	background:-moz-linear-gradient(#fff, $lightGrey);
+	border:1px solid $lightGrey;
+	border-radius:$borderRadius;
+	padding:$verticalUnit;
+	overflow:hidden;
+
+	div.input {
+		margin:0 0 10px 0;
+
+		input, textarea {
+			padding:4px 1.5%;
+			width:96%; /* 1% to allow for the borders... ;) */
+			font-family:$inputFont;
+			color:#656463;
+			font-size:1em;
+		}
+		input {
+			line-height:$verticalUnit;
+		}
+		textarea {
+			line-height:1.5em;
+		}
+		label {
+			display:block;
+			color:#888;
+		}
+		&.text, &.password, &.search,  {
+			input {
+			}
+		}
+		&.number {
+			input {
+			}
+		}
+		textarea  {
+		}
+	}
+
+	div.error-message {
+		color:$alertColor;
+		&:before {
+			content: "\f071";
+			font-family: FontAwesome;
+			font-weight: normal;
+			font-style: normal;
+		}
+	}
+}

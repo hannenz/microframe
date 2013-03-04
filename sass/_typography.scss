@@ -1,0 +1,75 @@
+/* Typography */
+
+h1, h2, h3, h4, h5, h6 {
+	font-family:$headerFont;
+	font-weight:300;
+	color:#555;
+}
+
+h1 {
+	font-size:36px;
+	line-height:$verticalUnit/36px;
+	margin:2*$verticalUnit 0;
+	color:$primaryColor;
+}
+h2 {
+	font-size:30px;
+	line-height:$verticalUnit/30px;
+	margin:$verticalUnit 0;
+	color:$primaryColor;
+}
+
+h3 {
+	font-size:22px;
+	line-height: $verticalUnit/22px;
+	margin:$verticalUnit 0;
+	color:#222;
+}
+
+h4 {
+	font-size:$fontSize;
+	font-weight:700;
+	line-height:$verticalUnit/$fontSize;
+	margin: 0;
+	color:$primaryColor;
+}
+h5 {
+	font-size:$fontSize;
+	font-weight:700;
+	line-height:$verticalUnit/$fontSize;
+	margin: 0;
+	color:#333;
+}
+h6 {
+	font-size:$fontSize;
+	font-weight:400;
+	line-height: $verticalUnit/$fontSize;
+	margin:0;
+	color:#333;
+	text-decoration: underline;
+}
+
+small, .small {
+	font-size:0.9em;
+	color:$lightGrey;
+}
+
+p, li, dt, dd {
+	margin:0 0 $verticalUnit 0;
+	line-height:$verticalUnit;
+}
+
+hgroup > * {
+	margin-bottom:0;
+}
+
+.subheader {
+	font-size:1.5*$fontSize;
+	color:$mediumGrey;
+}
+
+blockquote {
+	margin-left:40px;
+	font-weight:300;
+	font-style:italic;
+}

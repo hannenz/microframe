@@ -1,0 +1,105 @@
+table {
+	border-radius:$borderRadius;
+	background:$superLightGrey;
+	border-collapse: collapse;
+
+	caption {
+		text-align:center;
+		font-weight:bold;
+		font-style:italic;
+	}
+
+	td, th {
+		text-align:left;
+		vertical-align:top;
+		padding:$verticalUnit*0.5;
+		border:0;
+		border-bottom:1px solid #fff;
+	}
+
+	thead {
+		tr {
+			td, th {
+				background:$primaryColor;
+				color:#fff;
+				a {
+					color:#fff;
+					&.asc:before {
+						font-family:"FontAwesome";
+						content:"\f0d7\0020";
+					}
+					&.desc:before {
+						font-family:"FontAwesome";
+						content:"\f0d8\0020";
+					}
+				}
+			}
+			td:first-child, th:first-child {
+				border-radius:$borderRadius 0 0 0;
+			}
+			td:last-child, th:last-child {
+				border-radius:0 $borderRadius 0 0;
+			}
+		}
+
+	}
+	tbody {
+		tr:last-child td, tr:last-child th {
+			border-bottom:0;
+		}
+	}
+	tfoot {
+		td, th {
+			background:$lightGrey;
+		}
+		border-radius:0 0 $borderRadius $borderRadius;
+		tr:last-child {
+			border-radius: 0 0 $borderRadius $borderRadius;
+			td, th {
+				border-bottom:0;
+			}
+			td:first-child, th:first-child {
+				border-radius: 0 0 0 $borderRadius;
+			}
+			td:last-child, th:last-child {
+				border-radius: 0 0 $borderRadius 0;
+			}
+		}
+	}
+}
+
+table.zebra {
+	tr:nth-child(odd) {
+		 td {
+			background-color:lighten($secondaryColor, 33%);
+			border:none;
+		}
+	}
+	tr, td, th {
+		border:none;
+	}
+}
+
+dl.tabular {
+	overflow:hidden;
+	width:100%;
+	max-width:600px;
+
+	>dt, >dd {
+		float:left;
+		padding:0;
+		margin:0;
+		border-top:1px solid $lightGrey;
+		padding:0.5*$verticalUnit 0;
+	}
+
+	> dt {
+		width:30%;
+		clear:both;
+		font-weight:bold;
+	}
+
+	> dd {
+		width:70%;
+	}
+}

@@ -1,0 +1,68 @@
+* {
+	margin:0;
+	padding:0;
+}
+
+body {
+	font-family:"Helvetica Neue", helvetica, arial, sans;
+	font-size:$fontSize;
+	line-height:1.5em;
+	color:#424242;
+	background:#fff;
+}
+
+p, ul, li, dl, dt, dd, article, section, aside {
+	display:block;
+}
+
+hr {
+	border:0;
+	border-top:1px solid $lightGrey;
+	margin:$verticalUnit - 1px 0 $verticalUnit 0;
+	height:0;
+	line-height:0;
+}
+
+a {
+	color:$primaryColor;
+	text-decoration:underline;
+	&:hover {
+		text-decoration: none;
+	}
+	&:focus {
+		outline:2px dotted $mediumGrey;
+	}
+}
+
+ol, ul {
+	padding:0;
+}
+
+ul, ul li {
+	list-style-type:square;
+}
+
+
+/* Some convenience styles */
+
+.fullwidth {
+	width:100%;
+}
+
+.float-left {
+	float:left;
+}
+
+.float-right {
+	float:right;
+}
+
+.clearfix:after{
+	content:'';
+	display:block;
+	visibility:hidden;
+	height:0;
+	line-height:0;
+	clear:both;
+	float:none;
+}

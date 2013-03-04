@@ -1,0 +1,41 @@
+.pulldown-menu {
+	position:absolute;
+	z-index:999;
+	background:$lightGrey;
+	top:100%;
+	left:0;
+	border-radius:$borderRadius;
+	box-shadow:0 0 5px rgba(30, 30, 30, 0.6);
+	min-width:120px;
+	width:auto;
+
+	> li {
+		// border-top:1px solid #fff;
+		padding:0;
+		margin:0;
+
+		> a {
+			display:block;
+			text-decoration:none;
+			color:$darkGrey;
+			padding: 0 1em;
+			font-size:0.9em;
+			line-height:2em;
+			&:hover {
+	//			background:$primaryColor;
+				color:#fff;
+				color:$primaryColor;
+			}
+
+		}
+		&:first-child {
+			border-radius:$borderRadius $borderRadius 0 0;
+		}
+		&:last-child {
+			border-radius:0 0 $borderRadius $borderRadius;
+		}
+
+
+	}
+
+}

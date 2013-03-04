@@ -1,0 +1,116 @@
+/* Buttons */
+
+@mixin gradient($color, $lighten:5%, $darken:5%, $x0:0, $x1:100%) {
+	background:$color;
+	background:-webkit-linear-gradient(top, lighten($color, $lighten) $x0, darken($color, $darken) $x1);
+	background:-moz-linear-gradient(top, lighten($color, $lighten) $x0, darken($color, $darken) $x1);
+	background:-ms-linear-gradient(top, lighten($color, $lighten) $x0, darken($color, $darken) $x1);
+	background:-o-linear-gradient(top, lighten($color, $lighten) $x0, darken($color, $darken) $x1);
+	background:linear-gradient(top, lighten($color, $lighten) $x0, darken($color, $darken) $x1);
+}
+
+
+.button {
+	display:inline-block;
+	text-decoration:none;
+	font-size:$fontSize;
+	line-height:$verticalUnit - 2px;
+	padding:0 0.5em;
+	color:#fff;
+	border-radius:4px;
+	cursor: pointer;
+
+	@include gradient($lightGrey);
+	border:1px solid darken($lightGrey, 10%);
+
+	&:hover, &:active, &:focus {
+		@include gradient($lightGrey, $darken:12%);
+	}
+}
+
+.button.primary {
+	@include gradient($primaryColor);
+	border:1px solid darken($primaryColor, 10%);
+	&:hover, &:active, &:focus {
+		@include gradient($primaryColor, $darken:12%);
+	}
+}
+
+.button.secondary {
+	@include gradient($secondaryColor);
+	border:1px solid $secondaryColor;
+	&:hover, &:active, &:focus {
+		@include gradient($secondaryColor, $darken:12%);
+	}
+}
+
+.button.tertiary {
+	@include gradient($tertiaryColor);
+	border:1px solid $tertiaryColor;
+	&:hover, &:active, &:focus {
+		@include gradient($tertiaryColor, $darken:12%);
+	}
+}
+
+
+.button.glossy {
+	box-shadow:1px 1px 1px #fff inset, 1px 1px 3px rgba(0, 0, 0, 0.5);
+	@include gradient($lightGrey, 10%, 0, 50%, 51%);
+}
+
+.button.glossy.primary {
+	@include gradient($primaryColor, 10%, 0, 50%, 51%);
+}
+.button.glossy.secondary {
+	@include gradient($secondaryColor, 10%, 0, 50%, 51%);
+}
+.button.glossy.tertiary {
+	@include gradient($tertiaryColor, 10%, 0, 50%, 51%);
+}
+
+
+.button.medium {
+	font-size:1.1em;
+	line-height:$verticalUnit / (1.1*$fontSize) - 2px;
+
+	padding:$verticalUnit*0.25 1.25em;
+
+	margin-top:$verticalUnit*0.25;
+	margin-bottom:$verticalUnit*0.25;
+}
+
+.button.large {
+	font-size:1.25em;
+	line-height:$verticalUnit/ (1.25*$fontSize) - 2px;
+	padding:$verticalUnit*0.5 2em;
+}
+
+
+.button-group {
+	// overflow:hidden;
+	position:relative;
+	.button {
+		border-radius:0;
+		float:left;
+	}
+	.button:first-child {
+		border-radius: $borderRadius 0 0 $borderRadius;
+	}
+	.button:last-child,
+	.pulldown-trigger {
+		border-radius: 0 $borderRadius $borderRadius 0;
+	}
+	&:after {
+		content:'';
+		display:block;
+		height:0;
+		line-height:0;
+		visibility: hidden;
+		clear:both;
+	}
+}
+
+.button.pulldown-trigger {
+	padding-left:6px;
+	padding-right:6px;
+}

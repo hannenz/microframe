@@ -1,0 +1,18 @@
+.message {
+	border-radius:$borderRadius;
+	background-color:$lightGrey;
+	font-weight:700;
+	color:$darkGrey;
+	line-height:$verticalUnit;
+	margin:0 0 $verticalUnit 0;
+	padding:0.5*$verticalUnit 1em;
+}
+
+.message.success {
+	background:$successColor;
+	color:#fff;
+}
+.message.alert {
+	background:$alertColor;
+	color:#fff;
+}

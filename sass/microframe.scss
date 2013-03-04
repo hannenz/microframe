@@ -1,0 +1,44 @@
+/* 
+ * Microframe (S)CSS Framework 
+ * 2013 Johannes Braun <j.braun@agentur-halma.de
+ *
+*/
+
+$fontSize: 12px;
+$gutterWidth: 1%;
+$headerFont: "Open Sans", "Helvetica Neue", helvetica, arial, sans-serif;
+$bodyFont: "Open Sans", "Helvetica Neue", helvetica, arial, sans-serif;
+$inputFont: "Open Sans", "Helvetica Neue", helvetica, arial, sans-serif; 
+$verticalUnit:18px;
+$borderRadius:4px;
+
+$primaryColor:#5C89BC;
+$secondaryColor:#89BC5C;
+$tertiaryColor:#BC5C89;
+
+$superLightGrey:#f2f3f4;
+$lightGrey:#d6d7d8;
+$mediumGrey:#999;
+$darkGrey:#666;
+
+$successColor:#89BC5C;
+$alertColor:#CB401A;
+
+
+//@import "normalize"; /* normalize is HTML5Boilerplate's normalize.css stylesheet */
+@import "reset";
+@import "debug";
+
+@import "font_awesome";
+@import "typography";
+@import "grid";
+@import "buttons";
+@import "forms";
+@import "navlist";
+@import "messages";
+@import "tables";
+
+@import "mediaqueries";
+
+@import "accordion";
+@import "pulldownmenu";

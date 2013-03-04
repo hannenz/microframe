@@ -1,0 +1,32 @@
+.accordion {
+	dt {
+		color:$primaryColor;
+		font-weight:bold;
+		position:relative;
+		padding-left:16px;
+		cursor:pointer;
+
+		&:before {
+			content:'';
+			display:block;
+			width:0;
+			height:0;
+			border:6px solid transparent;
+			border-left:8px solid $primaryColor;
+			position:absolute;
+			top:$fontSize/2;
+			left:4px;
+		}
+		&.active:before {
+			content:'';
+			display:block;
+			width:0;
+			height:0;
+			border:6px solid transparent;
+			border-top:8px solid $primaryColor;
+			position:absolute;
+			top:40%;
+			left:4px;
+		}
+	}
+}
