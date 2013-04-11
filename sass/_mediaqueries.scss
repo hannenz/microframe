@@ -1,12 +1,16 @@
-
-/* Tablet */
-@media (max-width:1024px) {
-
-}
-
-/* Phone */
-
-@media (max-width:480px){
+/* Small (Phone) */
+@media screen and (max-width:$breakpointSmall - 1px){
+	@if ($debug){
+		body:before {
+			content:'Phone';
+			background:#333;
+			color:#fff;
+			position:fixed;
+			top:0;
+			left:0;
+			padding:4px;
+		}
+	}
 	.row {
 		.column, .columns {
 			width:100%;
@@ -22,6 +26,38 @@
 				width:100%;
 				float:none;
 			}
+		}
+	}
+}
+
+
+/* Tablet */
+@media screen and (min-width:$breakpointSmall) and (max-width:$breakpointLarge - 1px) {
+	@if ($debug){
+		body:before {
+			content:'Tablet';
+			background:#333;
+			color:#fff;
+			position:fixed;
+			top:0;
+			left:0;
+			padding:4px;
+		}
+	}
+}
+
+/* Large (Desktop) */
+@media screen and (min-width:$breakpointLarge){
+	@if ($debug){
+		body:before {
+			content:'Desktop';
+			background:#333;
+			color:#fff;
+			position:fixed;
+			top:0;
+			left:0;
+			padding:4px;
+			z-index:999;
 		}
 	}
 }

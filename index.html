@@ -16,6 +16,7 @@
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,700' rel='stylesheet' type='text/css'>
 
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+        <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -33,7 +34,20 @@
 				<nav class="eight columns">
 					<ul class="navlist horizontal">
 						<li><a href="#"><i class="icon-home"></i> Home</a></li>
-						<li><a href="#"><i class="icon-inbox"></i> Projects</a></li>
+						<li><a class="has-submenu" href="#"><i class="icon-inbox"></i> Projects</a>
+							<ul>
+								<li><a href="#">First Project</a></li>
+								<li><a href="#">Project Nr. Two</a></li>
+								<li>
+									<a class="has-submenu" href="#">The third Project</a>
+									<ul>
+										<li><a href="#">PR3 - Data</a></li>
+										<li><a href="#">PR3 - Summary</a></li>
+										<li><a href="#">PR3 - Miscallaneous</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
 						<li><a href="#"><i class="icon-download-alt"></i> Downloads</a></li>
 						<li><a href="#"><i class="icon-info-sign"></i> About</a></li>
 						<li><a href="#"><i class="icon-phone"></i>Contact</a></li>
@@ -171,5 +185,8 @@
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.0.min.js"><\/script>')</script>
         <script src="js/plugins/accordion.js"></script>
     -->
+    <script src="js/plugins/navlist.js"></script>
+    <script src="js/microframe.js"></script>
+
     </body>
 </html>

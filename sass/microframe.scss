@@ -4,7 +4,7 @@
  *
 */
 
-$fontSize: 12px;
+$fontSize: 13px;
 $gutterWidth: 1%;
 $headerFont: "Open Sans", "Helvetica Neue", helvetica, arial, sans-serif;
 $bodyFont: "Open Sans", "Helvetica Neue", helvetica, arial, sans-serif;
@@ -24,9 +24,18 @@ $darkGrey:#666;
 $successColor:#89BC5C;
 $alertColor:#CB401A;
 
+/* Everything between small and large is "medium" (e.g. tablet) */
+$breakpointSmall:480px;
+$breakpointLarge:1280px;
+
+$debug: 1;
+
+$navlistSubmenuWidth: 240px;
+
 
 @import "normalize"; /* normalize is HTML5Boilerplate's normalize.css stylesheet */
 @import "reset";
+
 @import "debug";
 
 @import "font_awesome";
