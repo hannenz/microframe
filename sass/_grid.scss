@@ -10,9 +10,10 @@
 .row {
 	display:block;
 	overflow:visible;
-	width:100%;
-	margin:0 0-$gutterWidth;
-	padding:0;
+	margin-left: -1*$gutterWidth;
+	margin-right: -1*$gutterWidth;
+	padding:0 $gutterWidth 0 0;
+
 }
 
 .row:after, .clearfix:after {
@@ -28,20 +29,64 @@
 	position:relative;
 	display:block;
 	float:left;
-	margin-left:$gutterWidth;
-	margin-right:$gutterWidth;
+	padding-left:$gutterWidth;
 }
 
 
-.one.column, .one.columns {	width:(100%/12*1) - (2 * $gutterWidth); }
-.two.columns	{	width:(100%/12*2) - (2 * $gutterWidth); }
-.three.columns	{	width:(100%/12*3) - (2 * $gutterWidth); }
-.four.columns	{	width:(100%/12*4) - (2 * $gutterWidth); }
-.five.columns	{	width:(100%/12*5) - (2 * $gutterWidth); }
-.six.columns	{	width:(100%/12*6) - (2 * $gutterWidth); }
-.seven.columns	{	width:(100%/12*7) - (2 * $gutterWidth); }
-.eight.columns	{	width:(100%/12*8) - (2 * $gutterWidth); }
-.nine.columns	{	width:(100%/12*9) - (2 * $gutterWidth); }
-.ten.columns	{	width:(100%/12*10) - (2 * $gutterWidth); }
-.eleven.columns	{	width:(100%/12*11) - (2 * $gutterWidth); }
-.twelve.columns	{	width:(100%/12*12) - (2 * $gutterWidth); }
+.one.column, .one.columns {	width:(100%/12*1); }
+.two.columns	{	width:(100%/12*2); }
+.three.columns	{	width:(100%/12*3); }
+.four.columns	{	width:(100%/12*4); }
+.five.columns	{	width:(100%/12*5); }
+.six.columns	{	width:(100%/12*6); }
+.seven.columns	{	width:(100%/12*7); }
+.eight.columns	{	width:(100%/12*8); }
+.nine.columns	{	width:(100%/12*9); }
+.ten.columns	{	width:(100%/12*10); }
+.eleven.columns	{	width:(100%/12*11); }
+.twelve.columns	{	width:(100%/12*12); }
+
+/*
+ * Block Grid
+ */
+
+ul.block-grid {
+	margin:0;
+	padding:0;
+	> li {
+		list-style-type:none;
+		list-style-image: none;
+		float:left;
+		margin:0;
+		padding:0 $gutterWidth $gutterWidth 0;
+	}
+	&.two	{
+		li {
+			width: 50.000%; 
+			&:nth-of-type(2n+1){
+				clear:both;
+			}
+		}
+	}
+	&.three { li { width: 33.000%; }	}
+	&.four	{ li { width: 25.000%; }	}
+	&.five	{ li { width: 20.000%; }	}
+	&.six	{
+		li {
+			width: 16.666%;
+			&:nth-of-type(6n+1){
+				clear:both;
+			}
+		}
+	}
+	&.eight	{ li { width: 12.500%; }	}
+	&.ten 	{ li { width: 10.000%; }	}
+	&:after{
+		content:'.';
+		visibility:hidden;
+		height:0;
+		line-height:0;
+		clear:both;
+		display:block;
+	}
+}

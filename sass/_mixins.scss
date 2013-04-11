@@ -1,0 +1,77 @@
+/**
+ * _mixins.scss
+ * 
+ * @author Johannes Braun <j.braun@agentur-halma.de>
+ * @package bgfs
+ *
+ * Some basic mixins for cross browser compatibility (vendor-prefixes) and stuff
+ */
+
+
+/**
+ * desaturate
+ *
+ * Desaturate a picture.
+ *
+ * @var $perc: Percentage of desaturation;
+ */
+@mixin desaturate($perc){
+	-webkit-filter:grayscale($perc);
+	-moz-filter:grayscale($perc);
+	-ms-filter:grayscale($perc);
+	-o-filter:grayscale($perc);
+	@if $perc != 0 {
+		filter:url('desaturate.svg#greyscale');
+		filter:gray;
+	}
+	@else {
+		filter:none;
+	}
+}
+
+/*
+ * linear_gradient
+ * 
+ * simple prefix-free linear-gradient background
+ *
+ * @var $angle: from/ to
+ * @var $colorStops: color stops to use for the gradient
+ */
+@mixin linear_gradient($angle, $colorStops...){
+	background:-webkit-linear-gradient($angle, $colorStops);
+	background:-moz-linear-gradient($angle, $colorStops);
+	background:-ms-linear-gradient($angle, $colorStops);
+	background:-o-linear-gradient($angle, $colorStops);
+	background:linear-gradient($angle, $colorStops);
+}
+
+/**
+ * transition
+ *
+ * simple prefix-free css transitions
+ *
+ * @var $property: The property to be transitioned - or "all";
+ * @var $duration: Duration of the transition, e.g. 500ms
+ * @var $timing: Timing func for the transision, e.g. "ease-in";
+ */
+@mixin transition($property, $duration, $timing){
+	-webkit-transition:$property $duration $timing;
+	-moz-transition:$property $duration $timing;
+	-ms-transition:$property $duration $timing;
+	-o-transition:$property $duration $timing;
+	transition:$property $duration $timing;
+}
+
+/**
+ * opacity
+ *
+ * cross-browser (e.g. IE-copliant) opacity
+ *
+ * @var $perc: percetage of opacity;
+ */
+@mixin opacity($perc){
+	filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$perc});
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$perc})";
+	opacity:$perc / 100;
+}
+
