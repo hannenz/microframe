@@ -75,3 +75,26 @@
 	opacity:$perc / 100;
 }
 
+
+@mixin triangle($direction, $size, $size2, $color){
+	content:'';
+	width:0;
+	height:0;
+	display:block;
+	position:absolute;
+	top:0;
+	left:0;
+	border:$size solid transparent;
+	@if ($direction == "left"){
+		border-right:$size2 solid $color;
+	}
+	@if ($direction == "right"){
+		border-left:$size2 solid $color;
+	}
+	@if ($direction == "up"){
+		border-bottom:$size2 solid $color;
+	}
+	@if ($direction == "down"){
+		border-top:$size2 solid $color;
+	}
+}

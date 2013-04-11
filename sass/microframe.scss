@@ -10,6 +10,8 @@ $headerFont: "Open Sans", "Helvetica Neue", helvetica, arial, sans-serif;
 $bodyFont: "Open Sans", "Helvetica Neue", helvetica, arial, sans-serif;
 $inputFont: "Open Sans", "Helvetica Neue", helvetica, arial, sans-serif; 
 $verticalUnit:18px;
+$textColor:#434343;
+
 $borderRadius:4px;
 
 $primaryColor:#5C89BC;
@@ -32,9 +34,10 @@ $debug: 1;
 
 $navlistSubmenuWidth: 240px;
 
+@import "mixins";
 
-@import "normalize"; /* normalize is HTML5Boilerplate's normalize.css stylesheet */
-@import "reset";
+@import "normalize"; 	/* normalize is HTML5Boilerplate's normalize.css stylesheet */
+@import "reset";		/* microframe's reset */
 
 @import "debug";
 

@@ -11,7 +11,7 @@ ul.navlist {
 		margin:0;
 		padding:0;
 		 a {
-			color:#717273;
+			color:$mediumGrey;
 			text-decoration:none;
 			display:block;
 			line-height:3em;
@@ -161,34 +161,51 @@ ul.navlist.vertical > li {
 				width:100%;
 				text-align:left;
 				&.selected {
-					color:green;
+					background:$primaryColor;
+					color:#fff;
+
 				}
 				&.has-submenu:after {
-					content:"";
-					display:block;
-					width:0;
-					height:0;
-					border:4px solid transparent;
-					border-left:6px solid $mediumGrey;
-					position:absolute;
-					right:6px;
-					top:10px;
+					@include triangle("right", 4px, 6px, $mediumGrey);
+					left:auto;
+					right:4px;
+					top:$verticalUnit / 2;
 				}
 				&.has-submenu.selected:after {
-					content:"";
+					@include triangle("left", 4px, 6px, #fff);
+					left:auto;
+					right:4px;
+					top:$verticalUnit / 2;
+				}
+			}
+			&:hover {
+				> ul {
 					display:block;
-					width:0;
-					height:0;
-					border:4px solid transparent;
-					border-top:6px solid $mediumGrey;
-					position:absolute;
-					right:6px;
-					top:10px;
 				}
 			}
 			ul {
-//				padding-left:2*$gutterWidth;
+				display:none;
+				margin:0;
 			}
+		}
+	}
+	// Javascript kicked in, so we re-display the submenus (js will handle everything)
+	.microframe-navlist-js{
+		ul.horizontal.navlist {
+			li:hover {
+				background:transparent;
+				a {
+					color:$mediumGrey;
+					&.selected {
+						color:#fff;
+					}
+				}
+			}
+			ul {
+				border-top:1px solid #fff;
+				display:block;
+			}
+
 		}
 	}
 }
