@@ -4,16 +4,15 @@
  *
 */
 
-$fontSize: 13px;
-//$gutterWidth: 0.8%;
-$gutterWidth:18px;
+$fontSize: 12px;
+$gutterWidth: 1%;
 $headerFont: "Open Sans", "Helvetica Neue", helvetica, arial, sans-serif;
 $bodyFont: "Open Sans", "Helvetica Neue", helvetica, arial, sans-serif;
 $inputFont: "Open Sans", "Helvetica Neue", helvetica, arial, sans-serif; 
-$verticalUnit:20px;
+$verticalUnit:18px;
 $borderRadius:4px;
 
-$primaryColor:#97BF0D;
+$primaryColor:#5C89BC;
 $secondaryColor:#89BC5C;
 $tertiaryColor:#BC5C89;
 
@@ -25,6 +24,21 @@ $darkGrey:#666;
 $successColor:#89BC5C;
 $alertColor:#CB401A;
 
+
+//@import "normalize"; /* normalize is HTML5Boilerplate's normalize.css stylesheet */
 @import "reset";
-@import "normalize"; /* normalize is HTML5Boilerplate's normalize.css stylesheet */
+@import "debug";
+
+@import "font_awesome";
+@import "typography";
 @import "grid";
+@import "buttons";
+@import "forms";
+@import "navlist";
+@import "messages";
+@import "tables";
+
+@import "mediaqueries";
+
+@import "accordion";
+@import "pulldownmenu";
