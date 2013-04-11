@@ -1,5 +1,5 @@
 /* Small (Phone) */
-@media screen and (max-width:$breakpointSmall - 1px){
+@media screen and (max-width:$breakpointSmall){
 	@if ($debug){
 		body:before {
 			content:'Phone';
@@ -28,11 +28,17 @@
 			}
 		}
 	}
+	.hide-on-small, .hide-on-medium-down {
+		display:none;
+	}
+	.show-on-small, .show-ons-medium-down {
+		display:block;
+	}
 }
 
 
 /* Tablet */
-@media screen and (min-width:$breakpointSmall) and (max-width:$breakpointLarge - 1px) {
+@media screen and (min-width:$breakpointSmall + 1px) and (max-width:$breakpointLarge - 1px) {
 	@if ($debug){
 		body:before {
 			content:'Tablet';
@@ -59,6 +65,12 @@
 			padding:4px;
 			z-index:999;
 		}
+	}
+	.hide-on-large, .hide-on-medium-up {
+		display:none;
+	}
+	.show-on-large, .show-on-medium-up {
+		display:block;
 	}
 }
 
