@@ -16,11 +16,36 @@
 
 		options = $.extend({}, $.fn[pluginName].defaults, options);
 
+		var $toggle = $('<a class="navlist-toggle"></a>');
+		var $menu = null;
+		var $menuWrapper = $('<div class="navlist-mobile" />');
+
 		function init() {
-			$('body').addClass('microframe-navlist-js');
-			$el.find('ul').hide();
-			$el.find('a.has-submenu').bind('click', _onClick);
+
+			// Completely re-build the menu, hide the original one.
+
+			$menu = $el.clone();
+			$menuWrapper.append($toggle).append($menu);
+
+			$menuWrapper.insertBefore($el);
+			$menu.find('ul').hide();
+
+
+			$menu.find('a.has-submenu').bind('click', _onClick);
+			$toggle.text($el.attr('title')).bind('click', _toggle);
+
+			$menu.hide();
 			hook('onInit');
+		}
+
+		function _toggle(event){
+			event.preventDefault();
+			if ($menu.is(':visible')){
+				$menu.slideUp(options.animationSpeed);
+			}
+			else {
+				$menu.slideDown(options.animationSpeed);
+			}
 		}
 
 		function _onClick(event){

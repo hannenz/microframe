@@ -48,7 +48,10 @@ ul.navlist.vertical > li {
 	}
 }
 
-@media screen and (min-width:$breakpointSmall){
+@media screen and (min-width:$breakpointSmall + 1px){
+	.navlist-mobile {
+		display:none;
+	}
 	ul.navlist.horizontal {
 		overflow:visible;
 
@@ -153,6 +156,61 @@ ul.navlist.vertical > li {
 }
 
 @media screen and (max-width:$breakpointSmall){
+
+	/* The menu when displayed without javascript / CSS only
+	 * We display a flat menu with no hierarchy,
+	 */
+
+	ul.navlist {
+		display:none;
+	}
+
+	.navlist-mobile {
+		display:block;
+		position:relative;
+		min-height:48px;
+		.navlist-toggle {
+			display:block;
+			height:48px;
+			width:100%;
+			line-height:48px;
+			text-decoration:none;
+			cursor:pointer;
+			text-align:right;
+			padding-left:4px;
+			font-size:2em;
+			&:after {
+				font-family:"FontAwesome";
+				content: "\f009";
+				margin-left:1em;
+				font-size:1.5em;
+			}
+		}
+		ul {
+			li {
+				a {
+					&.selected {
+						background:$primaryColor;
+						color:#fff;
+
+					}
+					&.has-submenu:after {
+						@include triangle("right", 4px, 6px, $mediumGrey);
+						left:auto;
+						right:4px;
+						top:$verticalUnit / 2;
+					}
+					&.has-submenu.selected:after {
+						@include triangle("left", 4px, 6px, #fff);
+						left:auto;
+						right:4px;
+						top:$verticalUnit / 2;
+					}
+				}
+			}
+		}
+	}
+
 	ul.horizontal.navlist {
 		li {
 			width:100%;
@@ -160,52 +218,26 @@ ul.navlist.vertical > li {
 			a {
 				width:100%;
 				text-align:left;
-				&.selected {
-					background:$primaryColor;
-					color:#fff;
-
-				}
-				&.has-submenu:after {
-					@include triangle("right", 4px, 6px, $mediumGrey);
-					left:auto;
-					right:4px;
-					top:$verticalUnit / 2;
-				}
-				&.has-submenu.selected:after {
-					@include triangle("left", 4px, 6px, #fff);
-					left:auto;
-					right:4px;
-					top:$verticalUnit / 2;
-				}
-			}
-			&:hover {
-				> ul {
-					display:block;
-				}
 			}
 			ul {
-				display:none;
+				display:block;
 				margin:0;
 			}
-		}
-	}
-	// Javascript kicked in, so we re-display the submenus (js will handle everything)
-	.microframe-navlist-js{
-		ul.horizontal.navlist {
-			li:hover {
-				background:transparent;
-				a {
+			&:hover {
+				background-color:transparent;
+				background-image:none;
+				> a {
 					color:$mediumGrey;
-					&.selected {
-						color:#fff;
+				}
+				li {
+					background-color:transparent;
+					background-image:none;
+
+					> a {
+						color:$mediumGrey;
 					}
 				}
 			}
-			ul {
-				border-top:1px solid #fff;
-				display:block;
-			}
-
 		}
 	}
 }
