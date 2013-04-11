@@ -11,3 +11,6 @@ css/microframe.css: ${OBJECTS}
 css/microframe.min.css: ${OBJECTS}
 	sass -t compressed sass/microframe.scss $@
 
+watch: ${OBJECTS}
+	sass --watch --line-comments sass:css
+
