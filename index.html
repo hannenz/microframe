@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
@@ -16,9 +16,10 @@
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,700' rel='stylesheet' type='text/css'>
 
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
-        <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+        <script src="js/vendor/jquery-1.9.0.min.js"></script>
     </head>
     <body>
+
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
@@ -68,49 +69,106 @@
 						<li><a href="#"><i class="icon-coffee"></i> Morte, atomis.</a></li>
 					</ul>
 				</nav>
-				<div class="eight columns">
+				<div id="main-content" class="eight columns">
 
-					<h3>Tables</h3>
-					<p>Here be some tables.</p>
+					<div class="row">
+						<div class="eight columns">
 
-					<table cellspacing="0">
-						<caption>A nice formatted table</caption>
-						<thead>
-							<tr>
-								<th>Nr</th>
-								<td>Description</td>
-								<td>Price</td>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<th>1</th>
-								<td>Lorem ipsum dolor sit amet</td>
-								<td>3.99 €</td>
-							</tr>
-							<tr>
-								<th>2</th>
-								<td>Ob turma continens erat eloquentiam beatus effectrices, dividendo</td>
-								<td>17.80 €</td>
-							</tr>
-							<tr>
-								<th>3</th>
-								<td>Nullam excelsus, fugiendam scribendi tota.</td>
-								<td>12.55 €</td>
-							</tr>
-						</tbody>
-						<tfoot>
-							<tr>
-								<th>Summe</th>
-								<td>&nbsp;</td>
-								<th>34.34 €</th>
-							</tr>
-						</tfoot>
-					</table>
+							<div class="row">
+								<div class="twelve columns">
+									<h2>Welcome to the Frame</h2>
+									<p>Testibus certae reliquisti certa angere perinde appetere, torquato solvantur omittantur sollicitare avocent amputata, faciendi praetermittenda perpetiuntur exeamus detrimenti idem philosophi scriptorem. Incursione.</p>
+									<p>Placeat dicitur addidisti cum sententia scripserit dolorem flagitem fortitudo at, apte easque.</p>
+									<p>Libidinibus arguerent illum legendam intemperantes tritani divina, gerendarum, inclusae maior invidi, imperii infinitis linguam, disputari cursu expectant libro aristotelem amicum leniter nemini tibique. Alios homero maximeque evolutio illius facultas percipitur mors inane primis. Vigiliae.</p>
+								</div>
+							</div>
+							<div class="row">
+								<div class="four columns">
+									<h3>Learn</h3>
+									<figure>
+										<img src="http://placehold.it/200x200" alt="" />
+										<figcaption>Versuum appetendum</figcaption>
+									</figure>
+								</div>
+								<div class="four columns">
+									<h3>Use</h3>
+									<figure>
+										<img src="http://placehold.it/200x200" alt="" />
+										<figcaption>Versuum appetendum</figcaption>
+									</figure>
+								</div>
+								<div class="four columns">
+									<h3>Share!</h3>
+									<figure>
+										<img src="http://placehold.it/200x200" alt="" />
+										<figcaption>Versuum appetendum</figcaption>
+									</figure>
+								</div>
+							</div>
 
-					<h2>Lorem ipsum</h2>
-						       
-					<p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
+							<h3>Tables</h3>
+							<p>Here be some tables.</p>
+
+							<table cellspacing="0">
+								<caption>A nice formatted table</caption>
+								<thead>
+									<tr>
+										<th>Nr</th>
+										<td>Description</td>
+										<td>Price</td>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th>1</th>
+										<td>Lorem ipsum dolor sit amet</td>
+										<td>3.99 €</td>
+									</tr>
+									<tr>
+										<th>2</th>
+										<td>Ob turma continens erat eloquentiam beatus effectrices, dividendo</td>
+										<td>17.80 €</td>
+									</tr>
+									<tr>
+										<th>3</th>
+										<td>Nullam excelsus, fugiendam scribendi tota.</td>
+										<td>12.55 €</td>
+									</tr>
+								</tbody>
+								<tfoot>
+									<tr>
+										<th>Summe</th>
+										<td>&nbsp;</td>
+										<th>34.34 €</th>
+									</tr>
+								</tfoot>
+							</table>
+
+							<h2>Lorem ipsum</h2>
+								       
+							<p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
+						</div>
+						<div class="four columns">
+							<aside class="callout panel">
+								<h3>Get To Action</h3>
+								<p>Um, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
+								<button class="large primary button"><i class="icon-star"></i> Do it now!</button>
+							</aside>
+							<aside class="panel">
+								<h3>Some pictures</h3>
+								<ul class="block-grid three">
+									<li><img src="http://placehold.it/64x64" alt="" /></li>
+									<li><img src="http://placehold.it/64x64" alt="" /></li>
+									<li><img src="http://placehold.it/64x64" alt="" /></li>
+									<li><img src="http://placehold.it/64x64" alt="" /></li>
+									<li><img src="http://placehold.it/64x64" alt="" /></li>
+									<li><img src="http://placehold.it/64x64" alt="" /></li>
+									<li><img src="http://placehold.it/64x64" alt="" /></li>
+									<li><img src="http://placehold.it/64x64" alt="" /></li>
+								</ul>
+							</aside>
+						</div>
+					</div>
 
 					<h2>Header Level 2</h2>
 
@@ -180,9 +238,7 @@
 
 		</div>
 
-<!--
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.0.min.js"><\/script>')</script>
+	<!--
         <script src="js/plugins/accordion.js"></script>
     -->
     <script src="js/plugins/navlist.js"></script>

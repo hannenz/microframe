@@ -33,7 +33,6 @@
 
 			$menu.find('a.has-submenu').bind('click', _onClick);
 			$toggle.text($el.attr('title')).bind('click', _toggle);
-			$toggle.bind('click', _toggle);
 
 			$menu.hide();
 			hook('onInit');

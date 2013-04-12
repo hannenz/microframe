@@ -1,37 +1,41 @@
-/* 
- * Microframe (S)CSS Framework 
- * 2013 Johannes Braun <j.braun@agentur-halma.de
+/**
+ * microframe.scss
  *
-*/
+ * Microframe (S)CSS Framework 
+ * @author Johannes Braun <j.braun@agentur-halma.de
+ * @package microframe
+ */
 
-$fontSize: 13px;
-$gutterWidth: 1%;
+/* Grid settings */
+$gutterWidth: 24px;
+
+/* Typo settings */
 $headerFont: "Open Sans", "Helvetica Neue", helvetica, arial, sans-serif;
 $bodyFont: "Open Sans", "Helvetica Neue", helvetica, arial, sans-serif;
 $inputFont: "Open Sans", "Helvetica Neue", helvetica, arial, sans-serif; 
+$fontSize: 13px;
 $verticalUnit:18px;
 $textColor:#434343;
 
-$borderRadius:4px;
-
+/* Colors */
 $primaryColor:#5C89BC;
 $secondaryColor:#89BC5C;
 $tertiaryColor:#BC5C89;
-
 $superLightGrey:#f2f3f4;
 $lightGrey:#d6d7d8;
 $mediumGrey:#999;
 $darkGrey:#666;
-
 $successColor:#89BC5C;
 $alertColor:#CB401A;
 
+/* Media queries settings */
 /* Everything between small and large is "medium" (e.g. tablet) */
 $breakpointSmall:480px;
 $breakpointLarge:1280px;
 
+/* Misc */
+$borderRadius:4px;
 $debug: 1;
-
 $navlistSubmenuWidth: 240px;
 
 @import "mixins";
