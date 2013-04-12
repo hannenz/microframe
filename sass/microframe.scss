@@ -7,44 +7,132 @@
  */
 
 /* Grid settings */
+
+/**
+ * @var $columns		The number of columns for the grid, 8, 10, 12, 16 are good values (max. is 20)
+ */
+$columns: 12;
+/**
+ * @var $gutterWidth	Width of the spacing between columns in px.
+ */
 $gutterWidth: 24px;
+/**
+ * @var $blockGrids		List of numbers for which we will compile block-grids for
+ */
+$blockGrids: 2,3,5,10;
+
 
 /* Typo settings */
+
+/**
+ * @var $headerFont		Font to be used for headings
+ */
 $headerFont: "Open Sans", "Helvetica Neue", helvetica, arial, sans-serif;
+/**
+ * @var $bodyFont		Font to be used for body copy
+ */
 $bodyFont: "Open Sans", "Helvetica Neue", helvetica, arial, sans-serif;
+/**
+ * @var $inputFont		Font to be used for form inputs (and textareas)
+ */
 $inputFont: "Open Sans", "Helvetica Neue", helvetica, arial, sans-serif; 
+/**
+ * @var $fontSize 		The base font size
+ */
 $fontSize: 13px;
+/**
+ * @var $verticalUnit	Vertical unit for vertical rhythm
+ */
 $verticalUnit:18px;
-$textColor:#434343;
+
 
 /* Colors */
+
+/**
+ * @var $textColor		Text color for body copy
+ */
+$textColor:#434343;
+/**
+ * @var $primaryColor	Primary color
+ */
 $primaryColor:#5C89BC;
+/**
+ * @var $secondaryColor	Secondary color
+ */
 $secondaryColor:#89BC5C;
+/**
+ * @var $tertiaryColor	Tertiary color
+ */
 $tertiaryColor:#BC5C89;
+/**
+ * @var $superLightGrey	Very light grey tone e.g. for "thin" lines
+ */
 $superLightGrey:#f2f3f4;
+/**
+ * @var $lightGrey		Light grey tone
+ */
 $lightGrey:#d6d7d8;
+/**
+ * @var $mediumGrey		Medium grey tone
+ */
 $mediumGrey:#999;
+/**
+ * @var $darkGrey		Dark grey tone
+ */
 $darkGrey:#666;
+/**
+ * @var $successColor	Color for success messages
+ */
 $successColor:#89BC5C;
+/**
+ * @var $alertColor		Color for alert messages
+ */
 $alertColor:#CB401A;
 
-/* Media queries settings */
-/* Everything between small and large is "medium" (e.g. tablet) */
+
+/* Media queries settings
+ * Everything between small and large is "medium" (e.g. tablet)
+ */
+
+/**
+ * @var $breakpointSmall	Everything below is treated as "small", e.g. phone
+ */
 $breakpointSmall:480px;
+/**
+ * @var $breakpointLarge	Everything above is treated as "large", e.g. desktop
+ */
 $breakpointLarge:1280px;
 
 /* Misc */
+/**
+ * @var $borderRadius 		Default border radius
+ */
 $borderRadius:4px;
+
+/**
+ * @var $debug 				Debug switch. Set to 1 to enable some debug outputs (e.g. vertical raster line, current media query)
+ */
 $debug: 1;
+
+/**
+ * @var $navlistSubmenuWidth	Width of submenus in navlist when in "hover" mode (tablet, desktop)
+ */
 $navlistSubmenuWidth: 240px;
 
+
+/*
+ * Here follow the modules as imports. The first ones are basic stuff and obligatory.
+ */
+
 @import "mixins";
-
 @import "normalize"; 	/* normalize is HTML5Boilerplate's normalize.css stylesheet */
-@import "reset";		/* microframe's reset */
+@import "base";			/* microframe's reset and extends */
 
+/* 
+ * The modules below are optional 
+ * Please remove or comment the ones you don't need
+ */
 @import "debug";
-
 @import "font_awesome";
 @import "typography";
 @import "grid";
@@ -53,8 +141,7 @@ $navlistSubmenuWidth: 240px;
 @import "navlist";
 @import "messages";
 @import "tables";
-
 @import "mediaqueries";
-
 @import "accordion";
 @import "pulldownmenu";
+@import "breadcrumbs";

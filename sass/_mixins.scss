@@ -8,6 +8,7 @@
  */
 
 
+
 /**
  * desaturate
  *
@@ -80,10 +81,7 @@
 	content:'';
 	width:0;
 	height:0;
-	display:block;
-	position:absolute;
-	top:0;
-	left:0;
+	display:inline-block;
 	border:$size solid transparent;
 	@if ($direction == "left"){
 		border-right:$size2 solid $color;

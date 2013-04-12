@@ -1,0 +1,15 @@
+/**
+ * _breadcrumbs.scss
+ *
+ * breadcrumns module
+ * Not much to do here, breadcrumbs are pretty well a series of (inline) links followed by some text indicating where we are...
+ */
+
+.breadcrumbs {
+	a:after {
+		@include triangle("right", 3px, 5px, $primaryColor);
+		margin-left:4px;
+	}
+	color:$secondaryColor;
+
+}

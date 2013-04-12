@@ -8,52 +8,68 @@
  */
 .container {
 	min-width:360px;
-	max-width:1400px;
+	max-width:1160px;
 	margin:0 auto;
-}
 
-.row {
-	display:block;
-	overflow:visible;
-	margin-left: -1*$gutterWidth;
-	margin-right: -1*$gutterWidth;
-	padding:0 $gutterWidth 0 0;
-}
+	.row {
+		display:block;
+		overflow:visible;
+		margin-left: -1*$gutterWidth;
+		margin-right: -1*$gutterWidth;
+		padding:0 $gutterWidth 0 0;
+		&:after {
+			@extend .clearfix;
+		}
 
-.row:after, .clearfix:after {
-	content:'.';
-	display:block;
-	visibility: hidden;
-	height:0;
-	line-height: 0;
-	clear:both;
-}
+		.column, .columns {
+			position:relative;
+			display:block;
+			float:left;
+			padding-left:$gutterWidth;
 
-.column, .columns {
-	position:relative;
-	display:block;
-	float:left;
-	padding-left:$gutterWidth;
-
-	img {
-		max-width:100%;
-		height:auto;
+			img {
+				max-width:100%;
+				height:auto;
+			}
+		}
 	}
 }
 
+	
+@function word($number){
+	@if $number == 0 { @return "zero";}
+	@if $number == 1{ @return "one";}
+	@if $number == 2{ @return "two";}
+	@if $number == 3{ @return "three";}
+	@if $number == 4 { @return "four";}
+	@if $number == 5 { @return "five";}
+	@if $number == 6 { @return "six";}
+	@if $number == 7 { @return "seven";}
+	@if $number == 8 { @return "eight";}
+	@if $number == 9 { @return "nine";}
+	@if $number == 10 { @return "ten";}
+	@if $number == 11 { @return "eleven";}
+	@if $number == 12 { @return "twelve";}
+	@if $number == 13 { @return "thirteen";}
+	@if $number == 14 { @return "fourteen";}
+	@if $number == 15 { @return "fifteen";}
+	@if $number == 16 { @return "sixteen";}
+	@if $number == 17 { @return "seventeen";}
+	@if $number == 18 { @return "eighteen";}
+	@if $number == 19 { @return "nineteen";}
+	@if $number == 20 { @return "twenty";}
+	@return "NaN";
+}
 
-.one.column, .one.columns {	width:(100%/12*1); }
-.two.columns	{	width:(100%/12*2); }
-.three.columns	{	width:(100%/12*3); }
-.four.columns	{	width:(100%/12*4); }
-.five.columns	{	width:(100%/12*5); }
-.six.columns	{	width:(100%/12*6); }
-.seven.columns	{	width:(100%/12*7); }
-.eight.columns	{	width:(100%/12*8); }
-.nine.columns	{	width:(100%/12*9); }
-.ten.columns	{	width:(100%/12*10); }
-.eleven.columns	{	width:(100%/12*11); }
-.twelve.columns	{	width:(100%/12*12); }
+$columnWidth: 100% / $columns;
+
+@for $c from 1 through $columns {
+	$n:word($c);
+	.#{$n}.columns {
+		width:($columnWidth * $c);
+	}
+}
+
 
 /*
  * Block Grid
@@ -73,33 +89,20 @@ ul.block-grid {
 			height:auto;
 		}
 	}
-	&.two	{
-		li {
-			width: 50.000%; 
-			&:nth-of-type(2n+1){
-				clear:both;
+
+	@each $i in $blockGrids {
+		$n:word($i);
+		&.#{$n} {
+			li {
+				width:100% / $i;
+				&:nth-of-type(#{$i}n+1){
+					clear:both;
+				}
 			}
 		}
 	}
-	&.three { li { width: 33.000%; }	}
-	&.four	{ li { width: 25.000%; }	}
-	&.five	{ li { width: 20.000%; }	}
-	&.six	{
-		li {
-			width: 16.666%;
-			&:nth-of-type(6n+1){
-				clear:both;
-			}
-		}
-	}
-	&.eight	{ li { width: 12.500%; }	}
-	&.ten 	{ li { width: 10.000%; }	}
+
 	&:after{
-		content:'.';
-		visibility:hidden;
-		height:0;
-		line-height:0;
-		clear:both;
-		display:block;
+		@extend .clearfix;
 	}
 }

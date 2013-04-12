@@ -1,3 +1,35 @@
+/**
+ * _base.scss
+ *
+ * Basic styles, classes and extends for the microframe scss framework
+ * @author Johannes Braun <j.braun@agentur-halma.de>
+ * @packacge microframe
+ */
+
+
+/*
+ * Extends
+ */
+
+/**
+ * clearfix
+ *
+ * We all know what it does...?! ;)
+ **/
+.clearfix {
+	content:'.';
+	display:block;
+	visibility: hidden;
+	height:0;
+	line-height: 0;
+	clear:both;
+}
+
+
+/*
+ * Resets
+ */
+
 * {
 	margin:0;
 	padding:0;
@@ -15,10 +47,13 @@ body {
 	line-height:1.5em;
 	color:#424242;
 	background:#fff;
-}
 
-p, ul, li, dl, dt, dd, article, section, aside {
-	display:block;
+	width:100%;
+	margin:0;
+	padding:0;
+
+	overflow:hidden;
+	padding:$gutterWidth;
 }
 
 hr {
@@ -64,11 +99,6 @@ ul, ul li {
 }
 
 .clearfix:after{
-	content:'';
-	display:block;
-	visibility:hidden;
-	height:0;
-	line-height:0;
-	clear:both;
-	float:none;
+	@extend .clearfix
 }
+
