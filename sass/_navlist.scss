@@ -1,5 +1,14 @@
-/* Navlist */
+/**
+ * _navlist.scss
+ *
+ * navlist module for microframe scss framework
+ * 
+ * @author Johannes Braun <j.braun@agentur-halma.de>
+ * @package microframe
+ */
 
+
+/* The bare menu (CSS only, no Javascript) */
 ul.navlist {
 	overflow:hidden;
 	background:$superLightGrey;
@@ -27,6 +36,7 @@ ul.navlist {
 	}
 }
 
+/* There's a vertical version, too */
 ul.navlist.vertical > li {
 	border-top:1px solid #fff;
 	border-bottom:1px solid #eee;
@@ -48,6 +58,8 @@ ul.navlist.vertical > li {
 	}
 }
 
+
+/* Non-phones get the hoverable version */
 @media screen and (min-width:$breakpointSmall + 1px){
 	.navlist-mobile {
 		display:none;
@@ -166,9 +178,11 @@ ul.navlist.vertical > li {
 	}
 
 	.navlist-mobile {
+
 		display:block;
 		position:relative;
 		min-height:48px;
+
 		.navlist-toggle {
 			display:block;
 			height:48px;
@@ -179,11 +193,14 @@ ul.navlist.vertical > li {
 			text-align:right;
 			padding-left:4px;
 			font-size:2em;
+			line-height:1.5em;
+
 			&:after {
 				font-family:"FontAwesome";
 				content: "\f009";
 				margin-left:1em;
-				font-size:1.5em;
+//				font-size:1.5em;
+//				line-height:1.5em;
 			}
 		}
 		ul {
