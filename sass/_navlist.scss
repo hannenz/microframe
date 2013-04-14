@@ -7,6 +7,33 @@
  * @package microframe
  */
 
+ul.menu {
+	background:$superLightGrey;
+	margin:0;
+	li {
+		@extend .nobullets;
+		a {
+			display:block;
+			line-height:2*$verticalUnit - 2px;
+			border-top:1px solid #fff;
+			border-bottom:1px solid $lightGrey;
+			text-decoration:none;
+			padding:0 $gutterWidth;
+		}
+		&:hover > ul {
+			display:block;
+		}
+		ul {
+			margin:0;
+			padding:0;
+			display:none;
+		}
+	}
+	&.horizontal {
+		
+	}
+}
+
 
 /* The bare menu (CSS only, no Javascript) */
 ul.navlist {
@@ -39,7 +66,7 @@ ul.navlist {
 /* There's a vertical version, too */
 ul.navlist.vertical > li {
 	border-top:1px solid #fff;
-	border-bottom:1px solid #eee;
+	border-bottom:1px solid #eee;a
 	a {
 		padding-left:1em;
 		text-align:left;

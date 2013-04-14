@@ -10,5 +10,5 @@ $(document).ready(function(){
 	console.log('microframe js v 0.1');
 
 	//$('.pulldown-menu').pulldownmenu();
-	$('.navlist').navlist();
+	$('.menu').navlist();
 });

@@ -25,6 +25,10 @@
 	clear:both;
 }
 
+.nobullets {
+	list-style-type: none;
+	list-style-image: none;
+}
 
 /*
  * Resets
@@ -51,9 +55,6 @@ body {
 	width:100%;
 	margin:0;
 	padding:0;
-
-	overflow:hidden;
-	padding:$gutterWidth;
 }
 
 hr {
