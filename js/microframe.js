@@ -9,6 +9,10 @@ $(document).ready(function(){
 
 	console.log('microframe js v 0.1');
 
+	$('body').addClass('js-ready');
+
 	//$('.pulldown-menu').pulldownmenu();
 	$('.menu').navlist();
+	console.log('Initializing Off-Canvas-Menu');
+	$('.ocmenu').ocmenu();
 });

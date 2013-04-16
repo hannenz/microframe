@@ -1,6 +1,6 @@
 /* Small (Phone) */
 @media screen and (max-width:$breakpointSmall){
-	@if ($debug){
+	@if $debug == 1{
 		body:before {
 			content:'Phone';
 			background:#333;
@@ -54,7 +54,7 @@
 
 /* Large (Desktop) */
 @media screen and (min-width:$breakpointLarge){
-	@if $debug {
+	@if $debug == 1{
 		body:before {
 			content:'Desktop';
 			background:#333;
