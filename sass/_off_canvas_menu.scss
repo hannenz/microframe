@@ -1,0 +1,104 @@
+/**
+ * _off_canvas_menu.scss
+ *
+ * @author Johannes Braun <j.braun@agentur-halma.de>
+ * @package microframe
+ */
+
+$transitionTime:0.5s;
+
+.ocmenu-toggle {
+	display:none;
+}
+
+@media screen and (max-width:$breakpointLarge - 1px){
+	.ocmenu {
+		width:248px;
+		left:-210px;
+		top:0;
+		position:fixed;
+		z-index:3;
+		height:100%;
+		transition:left $transitionTime ease;
+
+		.ocmenu-toggle {
+			display:block;
+			background:#000;
+			background:rgba(0, 0, 0, 0.8);
+			width:48px;
+			height:48px;
+			position:fixed;
+			right:0;
+			top:0;
+			a {
+				position:absolute;
+				right:0px;
+				top:0;
+				color:white;
+				padding:10px;
+				text-decoration:none;
+				font-size:2em;
+				display:block;
+				text-align: center;
+				width:100%;
+				height:100%;
+			}
+			.ocmenu-close {
+				display:none;
+			}
+			.ocmenu-open {
+				display:block;
+			}
+		}
+
+		.ocmenu-list {
+			// -moz-transform:scaley(0.3);
+			// -moz-transform-origin:0 0;
+
+			background:#000;
+			background:rgba(0, 0, 0, 0.8);
+			margin:0;
+			height:100%;
+			width:200px;
+			box-shadow:4px 0 8px rgba(30, 30, 30, 0.9);
+			transition:all $transitionTime ease;
+			li {
+				a {
+					display:block;
+					color:#fff;
+					text-decoration: none;
+					line-height:3em;
+					border-bottom:1px solid #ccc;
+				}
+				ul {
+					margin:0;
+
+				}
+			}
+		}
+		&:target {
+			left:0;
+			.ocmenu-list {
+				-moz-transform:scaley(1);
+			}
+			.ocmenu-toggle {
+				.ocmenu-close {
+					display:block;
+				}
+				.ocmenu-open {
+					display:none;
+				}
+			}
+		}
+	}
+	.container {
+		position:relative;
+		transition:left 0.4s ease;
+		left:0;
+		top:0;
+	}
+
+	.js-ready.js-nav .container {
+		left:200px;
+	}
+}

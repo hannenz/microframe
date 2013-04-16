@@ -32,29 +32,36 @@
 						<h2 class="subheader">A lightweight CSS Framework</h2>
 					</hgroup>
 				</div>
-				<nav class="eight columns">
-					<ul class="menu no-navlist no-horizontal" title="Main Menu">
-						<li><a href="#"><i class="icon-home"></i> Home</a></li>
-						<li><a class="has-submenu" href="#"><i class="icon-inbox"></i> Projects</a>
-							<ul>
-								<li><a href="#">First Project</a></li>
-								<li><a href="#">Project Nr. Two</a></li>
-								<li>
-									<a class="has-submenu" href="#">The third Project</a>
-									<ul>
-										<li><a href="#">PR3 - Data</a></li>
-										<li><a href="#">PR3 - Summary</a></li>
-										<li><a href="#">PR3 - Miscallaneous</a></li>
-									</ul>
-								</li>
-							</ul>
-						</li>
-						<li><a href="#"><i class="icon-download-alt"></i> Downloads</a></li>
-						<li><a href="#"><i class="icon-info-sign"></i> About</a></li>
-						<li><a href="#"><i class="icon-phone"></i>Contact</a></li>
-						<li><a href="#"><i class="icon-question-sign"></i>Help</a></li>
-					</ul>
-				</nav>
+				<div class="eight columns">
+
+					<nav id="main-menu" class="ocmenu ">
+						<div class="ocmenu-toggle">
+							<a class="ocmenu-open" href="#main-menu"><i class="icon-list"></i></a>
+							<a class="ocmenu-close" href="#"><i class="icon-remove"></i></a>
+						</div>
+						<ul class="ocmenu-list no-navlist no-horizontal" title="Main Menu">
+							<li><a href="#"><i class="icon-home"></i> Home</a></li>
+							<li><a class="has-submenu" href="#"><i class="icon-inbox"></i> Projects</a>
+								<ul>
+									<li><a href="#">First Project</a></li>
+									<li><a href="#">Project Nr. Two</a></li>
+									<li>
+										<a class="has-submenu" href="#">The third Project</a>
+										<ul>
+											<li><a href="#">PR3 - Data</a></li>
+											<li><a href="#">PR3 - Summary</a></li>
+											<li><a href="#">PR3 - Miscallaneous</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li><a href="#"><i class="icon-download-alt"></i> Downloads</a></li>
+							<li><a href="#"><i class="icon-info-sign"></i> About</a></li>
+							<li><a href="#"><i class="icon-phone"></i>Contact</a></li>
+							<li><a href="#"><i class="icon-question-sign"></i>Help</a></li>
+						</ul>
+					</nav>
+				</div>
 			</header>
 
 			<hr>
@@ -246,6 +253,18 @@
     -->
     <script src="js/plugins/navlist.js"></script>
     <script src="js/microframe.js"></script>
+
+    <script>
+    $(document).ready(function(){
+    	$('body').addClass('js-ready');
+    	$('.ocmenu-open').bind('click', function(){
+    		$('body').addClass('js-nav');
+    	});
+    	$('.ocmenu-close').bind('click', function(){
+    		$('body').removeClass('js-nav');
+    	});
+    });
+    </script>
 
     </body>
 </html>

@@ -112,7 +112,7 @@ $borderRadius:4px;
 /**
  * @var $debug 				Debug switch. Set to 1 to enable some debug outputs (e.g. vertical raster line, current media query)
  */
-$debug: 1;
+$debug: 0;
 
 /**
  * @var $navlistSubmenuWidth	Width of submenus in navlist when in "hover" mode (tablet, desktop)
@@ -145,3 +145,4 @@ $navlistSubmenuWidth: 240px;
 @import "accordion";
 @import "pulldownmenu";
 @import "breadcrumbs";
+@import "off_canvas_menu";
