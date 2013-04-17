@@ -22,6 +22,8 @@
 			$el.find('.ocmenu-close').bind('click', function(event){
 				$('body').removeClass('js-nav');
 			});
+
+			$el.find('ul').hide();
 		}
 
 		// Initialize the plugin instance.

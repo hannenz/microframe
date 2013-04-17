@@ -20,22 +20,21 @@ body {
 
 @media screen and (max-width:$breakpointLarge - 1px){
 	.ocmenu {
+		position:fixed;
+		top:0;
+		left:0;
 
 		.ocmenu-list {
 			width:$ocMenuWidth;
 			height:100%;
 			margin:0;
+
 			position:fixed;
 			top:0;
-			left:0;
+			left:-100%;
 
 			background:#000;
-			background:rgba(0, 0, 0, 0.8);
-			box-shadow:4px 0 8px rgba(30, 30, 30, 0.9);
 
-			z-index:3;
-
-			-moz-transform:translate3d(-100%, 0, 0)/* scale3d(0.97, 0.97, 0.97)*/;
 			transition:all $transitionTime ease;
 
 			li {
@@ -49,13 +48,12 @@ body {
 				}
 				ul {
 					margin:0;
-
 				}
 			}
 		}
 		&:target {
 			.ocmenu-list {
-				-moz-transform:translate3d(0, 0, 0) /*scale3d(1.0, 1.0, 1.0)*/;
+				left:0;
 			}
 			.ocmenu-toggle {
 				.ocmenu-close {
@@ -67,32 +65,28 @@ body {
 			}
 		}
 	}
+
 	.container {
 		position:relative;
 		left:0;
 		top:0;
-		transition:all 0.4s ease;
+		transition:all $transitionTime ease;
 	}
 
 	.js-ready.js-nav .container {
 		left:$ocMenuWidth;
 	}
 
-
 	.ocmenu-toggle {
 		display:block;
 		background:#000;
-		background:rgba(0, 0, 0, 0.8);
 		width:48px;
 		height:48px;
 		position:fixed;
 		right:0;
 		top:0;
-		z-index:4;
+		z-index:1;
 		a {
-			position:absolute;
-			right:0px;
-			top:0;
 			color:white;
 			padding:10px;
 			text-decoration:none;
@@ -109,7 +103,21 @@ body {
 			display:block;
 		}
 	}
-
 }
 
-
+.csstransforms3d {
+	.ocmenu {
+		.ocmenu-list {
+			left:0!important;
+			-moz-transform:translate3d(-100%, 0, 0) scale3d(0.9,0.9,0.9);
+			-webkit-transform:translate3d(-100%, 0, 0) scale3d(0.9, 0.9, 0.9);
+			transform:translate3d(-100%, 0, 0) scale3d(0.9, 0.9, 0.9);
+		}
+		&:target .ocmenu-list {
+			left:0!important;
+			-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1);
+			-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1);
+			transform:translate3d(0, 0, 0) scale3d(1, 1, 1);
+		}
+	}
+}
