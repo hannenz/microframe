@@ -63,6 +63,14 @@ hr {
 	margin:$verticalUnit - 1px 0 $verticalUnit 0;
 	height:0;
 	line-height:0;
+	&.light {
+		border:0;
+		height:1px;
+		background:$superLightGrey;
+		@include linear_gradient(left, $superLightGrey, $lightGrey, $superLightGrey);
+		display:block;
+		width:100%;
+	}
 }
 
 a {

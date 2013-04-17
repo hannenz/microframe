@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 229" preserveAspectRatio="xMidYMid meet">
+  <title>Clown Car Technique</title>
+  <style>
+
+    svg {
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+    }
+
+    @media screen and (max-width: 320px) {
+      svg {
+        background-image: url("salad_320.jpg");
+      }
+    }
+
+    @media screen and (min-width: 321px) and (max-width: 960px) {
+      svg {
+        background-image: url("salad_960.jpg");
+      }
+    }
+
+    @media screen and (min-width: 961px) and (max-width: 1024px) {
+      svg {
+        background-image: url("salad_1024.jpg");
+      }
+    }
+
+    @media screen and (min-width: 1025px) {
+      svg {
+        background-image: url("salad_1280.jpg");
+      }
+    }
+
+  </style>
+</svg>

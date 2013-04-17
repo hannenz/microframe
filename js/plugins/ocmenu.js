@@ -23,7 +23,10 @@
 				$('body').removeClass('js-nav');
 			});
 
-			$el.find('ul').hide();
+			$el.find('.has-submenu').addClass('ocmenu-inactive').bind('click', function(event){
+				event.preventDefault();
+				$(this).toggleClass('ocmenu-inactive');
+			})
 		}
 
 		// Initialize the plugin instance.

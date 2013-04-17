@@ -14,7 +14,7 @@ h1 {
 }
 h2 {
 	font-size:30px;
-	line-height:$verticalUnit/30px;
+	line-height:2*($verticalUnit/30px);
 	margin:$verticalUnit 0;
 	color:$primaryColor;
 }
