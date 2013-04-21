@@ -15,4 +15,5 @@ $(document).ready(function(){
 	$('.menu').navlist();
 	console.log('Initializing Off-Canvas-Menu');
 	$('.ocmenu').ocmenu();
+	$('.bbox').expose();
 });
